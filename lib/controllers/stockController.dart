@@ -12,6 +12,7 @@ class StockController extends GetxController {
 
       if (response.statusCode == 200) {
         data.value = stockModelFromJson(response.body);
+        print(data.value.globalQuote.the01Symbol);
       } else {
         print(response.body);
       }

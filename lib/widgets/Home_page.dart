@@ -73,15 +73,22 @@ class _HomepageState extends State<Homepage> {
                       ],
                     ),
                   ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Search Stocks",
-                      hintStyle: TextStyle(color: Colors.white, fontSize: 16),
-                      suffixIcon: Icon(
-                        Icons.search,
+                  child: Center(
+                    child: TextField(
+                      style: TextStyle(
+                        fontSize: 17,
                         color: Colors.white,
-                        size: 20,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Search Stocks",
+                        hintStyle: TextStyle(color: Colors.white, fontSize: 16),
+                        suffixIcon: Icon(
+                          Icons.search,
+                          color: Colors.white,
+                          size: 20,
+                        ),
                       ),
                     ),
                   ),

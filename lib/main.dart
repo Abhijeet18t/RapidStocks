@@ -7,6 +7,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false, title: "stockApp", home: Homepage());
+      debugShowCheckedModeBanner: false,
+      title: "stockApp",
+      home: Homepage(),
+      theme: ThemeData(fontFamily: "Gilroy"),
+    );
   }
 }

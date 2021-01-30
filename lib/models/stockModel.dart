@@ -26,6 +26,16 @@ class StockModel {
 }
 
 class GlobalQuote {
+  String the01Symbol = '0';
+  String the02Open = '0';
+  String the03High = '0';
+  String the04Low = '0';
+  String the05Price = '0';
+  String the06Volume = '0';
+  String the07LatestTradingDay = '0';
+  String the08PreviousClose = '0';
+  String the09Change = '0';
+  String the10ChangePercent = '0';
   GlobalQuote({
     this.the01Symbol,
     this.the02Open,
@@ -39,17 +49,6 @@ class GlobalQuote {
     this.the10ChangePercent,
   });
 
-  String the01Symbol;
-  String the02Open;
-  String the03High;
-  String the04Low;
-  String the05Price;
-  String the06Volume;
-  DateTime the07LatestTradingDay;
-  String the08PreviousClose;
-  String the09Change;
-  String the10ChangePercent;
-
   factory GlobalQuote.fromJson(Map<String, dynamic> json) => GlobalQuote(
         the01Symbol: json["01. symbol"],
         the02Open: json["02. open"],
@@ -57,7 +56,7 @@ class GlobalQuote {
         the04Low: json["04. low"],
         the05Price: json["05. price"],
         the06Volume: json["06. volume"],
-        the07LatestTradingDay: DateTime.parse(json["07. latest trading day"]),
+        the07LatestTradingDay: json["07. latest trading day"],
         the08PreviousClose: json["08. previous close"],
         the09Change: json["09. change"],
         the10ChangePercent: json["10. change percent"],
@@ -70,8 +69,7 @@ class GlobalQuote {
         "04. low": the04Low,
         "05. price": the05Price,
         "06. volume": the06Volume,
-        "07. latest trading day":
-            "${the07LatestTradingDay.year.toString().padLeft(4, '0')}-${the07LatestTradingDay.month.toString().padLeft(2, '0')}-${the07LatestTradingDay.day.toString().padLeft(2, '0')}",
+        "07. latest trading day": the07LatestTradingDay,
         "08. previous close": the08PreviousClose,
         "09. change": the09Change,
         "10. change percent": the10ChangePercent,

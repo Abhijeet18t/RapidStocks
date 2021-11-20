@@ -1,2 +1,2 @@
 # RapidStocks
-An app  that fetches real-time global equities stocks using REST API. 
+An app that fetches global equity share deatils using RapidAPI.
